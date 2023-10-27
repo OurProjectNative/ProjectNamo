@@ -219,11 +219,13 @@ const Login = ({ navigation }) => {
                 </View>
 
                 <View style={{
-                    flexDirection: "row",
+                    flexDirection: "column",
                     justifyContent: "center",
                     marginVertical: 10,
-                    marginLeft: 100
-                }}></View>
+                    marginLeft: 50
+                }}>
+
+                </View>
                 <Text style={{ fontSize: 16, color: COLORS.black }}>Forgot Your Password ? </Text>
                     <Pressable
                         onPress={() => navigation.navigate("Forgot")}

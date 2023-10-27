@@ -139,7 +139,7 @@ const Forgot = ({ navigation }) => {
                         color={isChecked ? COLORS.primary : undefined}
                     />
 
-                    <Text>I aggree to the terms and conditions</Text>
+                    <Text>I agree to the terms and conditions</Text>
                 </View>
 
                 <Button
