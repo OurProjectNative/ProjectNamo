@@ -9,6 +9,31 @@ import Button from '../components/Button';
 const Signup = ({ navigation }) => {
     const [isPasswordShown, setIsPasswordShown] = useState(false);
     const [isChecked, setIsChecked] = useState(false);
+    const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [emailError, setEmailError] = useState('');
+  const [passwordError, setPasswordError] = useState('');
+
+  const validateEmail = (text) => {
+    const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+    if (emailRegex.test(text)) {
+      setEmailError('');
+    } else {
+      setEmailError('Please enter a valid email address');
+    }
+    setEmail(text);
+  };
+
+  const validatePassword = (text) => {
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}$/;
+    if (passwordRegex.test(text)) {
+      setPasswordError('');
+    } else {
+      setPasswordError('Password must contain at least 8 characters,including one uppercase letter, one lowercase letter, and one number.');
+    }
+    setPassword(text);
+  };
+
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.white }}>
             <View style={{ flex: 1, marginHorizontal: 22 }}>
@@ -52,8 +77,13 @@ const Signup = ({ navigation }) => {
                             style={{
                                 width: "100%"
                             }}
+                            value={email}
+                            onChangeText={validateEmail}
                         />
                     </View>
+                    {emailError ? (
+            <Text style={{ color: 'red' }}>{emailError}</Text>
+          ) : null}
                 </View>
 
                 <View style={{ marginBottom: 12 }}>
@@ -97,7 +127,7 @@ const Signup = ({ navigation }) => {
                     </View>
                 </View>
 
-                <View style={{ marginBottom: 12 }}>
+                <View style={{ marginBottom: 70 }}>
                     <Text style={{
                         fontSize: 16,
                         fontWeight: 400,
@@ -106,7 +136,7 @@ const Signup = ({ navigation }) => {
 
                     <View style={{
                         width: "100%",
-                        height: 48,
+                        height: 50,
                         borderColor: COLORS.black,
                         borderWidth: 1,
                         borderRadius: 8,
@@ -119,19 +149,23 @@ const Signup = ({ navigation }) => {
                             placeholderTextColor={COLORS.black}
                             secureTextEntry={isPasswordShown}
                             style={{
-                                width: "100%"
+                                width: "100%",
                             }}
+                            value={password}
+                            onChangeText={validatePassword}
                         />
-
+                            {passwordError ? (
+                     <Text style={{ color: 'red' }}>{passwordError}</Text>
+                            ) : null}
                         <TouchableOpacity
                             onPress={() => setIsPasswordShown(!isPasswordShown)}
                             style={{
                                 position: "absolute",
-                                right: 12
+                                right: 12,
                             }}
                         >
                             {
-                                isPasswordShown == true ? (
+                                isPasswordShown == false ? (
                                     <Ionicons name="eye-off" size={24} color={COLORS.black} />
                                 ) : (
                                     <Ionicons name="eye" size={24} color={COLORS.black} />

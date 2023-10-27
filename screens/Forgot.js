@@ -9,6 +9,32 @@ import Button from '../components/Button';
 const Forgot = ({ navigation }) => {
     const [isPasswordShown, setIsPasswordShown] = useState(false);
     const [isChecked, setIsChecked] = useState(false);
+    const [password, setPassword] = useState('');
+    const [passwordError, setPasswordError] = useState('');
+    const [email, setEmail] = useState('');
+    const [emailError, setEmailError] = useState('');
+
+    const validatePassword = (text) => {
+        // Password must contain at least 8 characters, including at least one uppercase letter, one lowercase letter, and one number.
+        const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}$/;
+        if (passwordRegex.test(text)) {
+          setPasswordError('');
+        } else {
+          setPasswordError('Password must contain at least 8 characters, including at least one uppercase letter, one lowercase letter, and one number.');
+        }
+        setPassword(text);
+      };
+
+      const validateEmail = (text) => {
+        const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+        if (emailRegex.test(text)) {
+          setEmailError('');
+        } else {
+          setEmailError('Please enter a valid email address');
+        }
+        setEmail(text);
+      };
+
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.white }}>
             <View style={{ flex: 1, marginHorizontal: 22 }}>
@@ -52,8 +78,13 @@ const Forgot = ({ navigation }) => {
                             style={{
                                 width: "100%"
                             }}
+                            value={email}
+                            onChangeText={validateEmail}
                         />
                     </View>
+                      {emailError ? (
+                      <Text style={{ color: 'red' }}>{emailError}</Text>
+                      ) : null}
                 </View>
 
                 <View style={{ marginBottom: 12 }}>
@@ -81,6 +112,7 @@ const Forgot = ({ navigation }) => {
                                 width: "100%"
                             }}
                         />
+                       
                 </View>
                 </View>
                 <View style={{ marginBottom: 12 }}>
@@ -107,8 +139,12 @@ const Forgot = ({ navigation }) => {
                             style={{
                                 width: "100%"
                             }}
+                            value={password}
+                            onChangeText={validatePassword}
                         />
-
+                             {passwordError ? (
+                             <Text style={{ color: 'red' }}>{passwordError}</Text>
+                         ) : null}
                         <TouchableOpacity
                             onPress={() => setIsPasswordShown(!isPasswordShown)}
                             style={{
