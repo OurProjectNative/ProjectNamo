@@ -11,6 +11,9 @@ export default ProfileView = () => {
   const navigateToLogin = () => {
     navigation.navigate('Login');
   };
+  const navigateToFeed = () => {
+    navigation.navigate('Feed');
+  };
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -44,6 +47,20 @@ export default ProfileView = () => {
             <Text>View Online Friends</Text>
           </TouchableOpacity>
         </View>
+        <View style={styles.body}>
+        <View style={styles.bodyContent}>
+        <TouchableOpacity style={styles.buttonContainer}>
+            <Text>Edit Profile</Text>
+          </TouchableOpacity>
+          <View style={styles.body}>
+        <View style={styles.bodyContent}>
+        <TouchableOpacity style={styles.buttonContainer} onPress={navigateToFeed}>
+            <Text>View Feed</Text>
+          </TouchableOpacity>
+          </View>
+          </View>
+          </View>
+          </View>
         <View style={styles.body}>
         <View style={styles.bodyContent}>
         <TouchableOpacity style={styles.buttonContainer} onPress={navigateToLogin}>

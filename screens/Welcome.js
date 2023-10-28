@@ -100,7 +100,7 @@ const Welcome = ({ navigation }) => {
                         fontSize: 16,
                         fontWeight: 800,
                         color: COLORS.white
-                    }}>"Chat safely"</Text>
+                    }}>"Connect with everyone."</Text>
 
                     <View style={{ marginVertical: 22 }}>
                         <Text style={{
@@ -111,7 +111,7 @@ const Welcome = ({ navigation }) => {
                         <Text style={{
                             fontSize: 16,
                             color: COLORS.white,
-                        }}>Enjoy Safe and private texting</Text>
+                        }}>Enjoy Sharing Stories !</Text>
                     </View>
 
                     <Button

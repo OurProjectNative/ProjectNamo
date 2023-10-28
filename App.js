@@ -1,6 +1,6 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
-import { Login, Signup, Welcome, Forgot, Profile, Friends } from "./screens";
+import { Login, Signup, Welcome, Forgot, Profile, Friends, Feed } from "./screens";
 
 const Stack = createNativeStackNavigator();
 
@@ -35,6 +35,13 @@ export default function App() {
         <Stack.Screen
           name="Friends"
           component={Friends}
+          options={{
+            headerShown: false
+          }}
+        />
+        <Stack.Screen
+          name="Feed"
+          component={Feed}
           options={{
             headerShown: false
           }}
