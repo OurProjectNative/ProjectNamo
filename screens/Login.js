@@ -19,7 +19,7 @@ const Login = ({ navigation }) => {
         if (emailRegex.test(text)) {
           setEmailError('');
         } else {
-          setEmailError('Please enter a valid email address');
+          setEmailError('Email Address Invalid');
         }
         setEmail(text);
       };
