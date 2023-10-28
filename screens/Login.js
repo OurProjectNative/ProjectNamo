@@ -25,7 +25,6 @@ const Login = ({ navigation }) => {
       };
 
       const validatePassword = (text) => {
-        // Password must contain at least 8 characters, including at least one uppercase letter, one lowercase letter, and one number.
         const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}$/;
         if (passwordRegex.test(text)) {
           setPasswordError('');
