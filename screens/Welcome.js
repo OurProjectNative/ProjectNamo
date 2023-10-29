@@ -107,7 +107,7 @@ const Welcome = ({ navigation }) => {
                             fontSize: 16,
                             color: COLORS.white,
                             marginVertical: 4
-                        }}>Connect other peers with Chatter</Text>
+                        }}>Connect with other peers with Chatter</Text>
                         <Text style={{
                             fontSize: 16,
                             color: COLORS.white,
