@@ -48,7 +48,7 @@ export default UsersView = () => {
         />
       </View>
       <TouchableOpacity style={styles.buttonContainer} onPress={navigateToProfile}>
-            <Text>Back to Profile</Text>
+            <Text>Return to Profile</Text>
           </TouchableOpacity>
     </View>
   )

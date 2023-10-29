@@ -100,18 +100,18 @@ const Welcome = ({ navigation }) => {
                         fontSize: 16,
                         fontWeight: 800,
                         color: COLORS.white
-                    }}>"Connect with everyone."</Text>
+                    }}>"Connect with Peers."</Text>
 
                     <View style={{ marginVertical: 22 }}>
                         <Text style={{
                             fontSize: 16,
                             color: COLORS.white,
                             marginVertical: 4
-                        }}>Connect with each other with Chatter</Text>
+                        }}>Connect other peers with Chatter</Text>
                         <Text style={{
                             fontSize: 16,
                             color: COLORS.white,
-                        }}>Enjoy Sharing Stories !</Text>
+                        }}>Enjoy Every Stories !</Text>
                     </View>
 
                     <Button
