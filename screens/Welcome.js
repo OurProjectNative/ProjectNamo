@@ -131,7 +131,7 @@ const Welcome = ({ navigation }) => {
                         <Text style={{
                             fontSize: 16,
                             color: COLORS.white
-                        }}>Already have an account ?</Text>
+                        }}>Already made an account ?</Text>
                         <Pressable
                             onPress={() => navigation.navigate("Login")}
                         >

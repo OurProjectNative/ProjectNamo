@@ -173,7 +173,7 @@ const Forgot = ({ navigation }) => {
                         color={isChecked ? COLORS.primary : undefined}
                     />
 
-                    <Text>I agree to the terms and conditions</Text>
+                    <Text>Agree to Terms and Conditions</Text>
                 </View>
 
                 <Button
@@ -181,7 +181,7 @@ const Forgot = ({ navigation }) => {
                     filled
                     style={{
                         marginTop: 18,
-                        marginBottom: 4,
+                        marginBottom: 5,
                     }}
                 />
 
