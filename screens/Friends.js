@@ -9,11 +9,11 @@ export default UsersView = () => {
       navigation.navigate('Profile');
     };
   const data = [
-    { id: 1, image: 'https://bootdey.com/img/Content/avatar/avatar6.png', username: 'Jerone' },
-    { id: 2, image: 'https://bootdey.com/img/Content/avatar/avatar2.png', username: 'Jaydee' },
+    { id: 1, image: 'https://bootdey.com/img/Content/avatar/avatar6.png', username: 'Jerome' },
+    { id: 2, image: 'https://bootdey.com/img/Content/avatar/avatar2.png', username: 'Jayvee' },
     { id: 3, image: 'https://bootdey.com/img/Content/avatar/avatar3.png', username: 'Janes' },
-    { id: 4, image: 'https://bootdey.com/img/Content/avatar/avatar4.png', username: 'Gramc' },
-    { id: 5, image: 'https://bootdey.com/img/Content/avatar/avatar1.png', username: 'Vcient' },
+    { id: 4, image: 'https://bootdey.com/img/Content/avatar/avatar4.png', username: 'Gmarc' },
+    { id: 5, image: 'https://bootdey.com/img/Content/avatar/avatar1.png', username: 'Vincent' },
     { id: 6, image: 'https://bootdey.com/img/Content/avatar/avatar6.png', username: 'Dole' },
     { id: 7, image: 'https://bootdey.com/img/Content/avatar/avatar1.png', username: 'Yolo' },
     { id: 8, image: 'https://bootdey.com/img/Content/avatar/avatar2.png', username: 'Dame' },
@@ -48,7 +48,7 @@ export default UsersView = () => {
         />
       </View>
       <TouchableOpacity style={styles.buttonContainer} onPress={navigateToProfile}>
-            <Text>Back to Profile</Text>
+            <Text>Return to Profile</Text>
           </TouchableOpacity>
     </View>
   )

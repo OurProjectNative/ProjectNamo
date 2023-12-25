@@ -25,16 +25,16 @@ const FeedScreen = () => {
     {
       id: 1,
       userId: 1,
-      username: 'Jerome Lagria',
+      username: 'Jechrome Lagria',
       avatarUrl: 'https://bootdey.com/img/Content/avatar/avatar2.png',
       date: 'October 27, 2023',
-      description: 'Boss Amo',
+      description: 'Boss Amo 2002',
       imageUrl: 'https://www.bootdey.com/image/580x520/FF00FF/000000',
     },
     {
       id: 2,
       userId: 2,
-      username: 'James Rocales',
+      username: 'Jamies Rocales',
       avatarUrl: 'https://bootdey.com/img/Content/avatar/avatar6.png',
       date: 'October 25, 2023',
       description: 'Hello mga KA-ISDA',
@@ -44,10 +44,10 @@ const FeedScreen = () => {
     {
       id: 3,
       userId: 1,
-      username: 'Gmarc Collados',
+      username: 'Gbarecos Collados',
       avatarUrl: 'https://bootdey.com/img/Content/avatar/avatar3.png',
       date: 'October 28, 2023',
-      description: 'I can fix her',
+      description: 'I can fix her, but I miss her.',
       imageUrl: 'https://www.bootdey.com/image/580x520/32CD32/000000',
     },
   ])

@@ -1,4 +1,4 @@
-import { View, Text, Image, Pressable, TextInput, TouchableOpacity } from 'react-native'
+import { View, Text, Pressable, TextInput, TouchableOpacity } from 'react-native'
 import React, { useState } from 'react'
 import { SafeAreaView } from "react-native-safe-area-context";
 import COLORS from '../constants/colors';
@@ -173,7 +173,7 @@ const Forgot = ({ navigation }) => {
                         color={isChecked ? COLORS.primary : undefined}
                     />
 
-                    <Text>I agree to the terms and conditions</Text>
+                    <Text>Agree to Terms and Conditions</Text>
                 </View>
 
                 <Button
@@ -181,7 +181,7 @@ const Forgot = ({ navigation }) => {
                     filled
                     style={{
                         marginTop: 18,
-                        marginBottom: 4,
+                        marginBottom: 5,
                     }}
                 />
 

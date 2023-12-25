@@ -19,7 +19,7 @@ const Login = ({ navigation }) => {
         if (emailRegex.test(text)) {
           setEmailError('');
         } else {
-          setEmailError('Please enter a valid email address');
+          setEmailError('Please Enter a Valid Email Address');
         }
         setEmail(text);
       };
@@ -29,7 +29,7 @@ const Login = ({ navigation }) => {
         if (passwordRegex.test(text)) {
           setPasswordError('');
         } else {
-          setPasswordError('Password must contain at least 8 characters, including one uppercase letter, one lowercase letter, and one number.');
+          setPasswordError('Password must contain at least 8 characters, including 1 uppercase letter, 1 lowercase letter, and 1 number.');
         }
         setPassword(text);
       };
@@ -148,7 +148,7 @@ const Login = ({ navigation }) => {
                 </View>
 
                 <Button
-                    title="Login"
+                    title="Log in"
                     filled
                     onPress={() => navigation.navigate("Profile")}
                     style={{

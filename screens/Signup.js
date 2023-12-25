@@ -29,7 +29,7 @@ const Signup = ({ navigation }) => {
     if (passwordRegex.test(text)) {
       setPasswordError('');
     } else {
-      setPasswordError('Password must contain at least 8 characters,including one uppercase letter, one lowercase letter, and one number.');
+      setPasswordError('Password must contain at least 8 characters,including 1 uppercase, 1 lowercase, and 1 number.');
     }
     setPassword(text);
   };
